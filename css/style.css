@@ -1,0 +1,78 @@
+
+
+    html{
+        max-height: 100%;
+    
+    }
+
+    #blocPage{
+        background-color: coral;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+
+    }
+   /* ----------------------titre------------------ */
+    h1{
+        font-size: 4em;
+        text-align: center;
+        
+    }
+  /* ------------------------images------------------ */
+    #icones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #icones img{
+        border-radius: 50%;
+        box-shadow: 0 10px 3px black;
+        max-width: 30%;
+        opacity: 0.8;
+    }
+    #icones img:hover{
+        opacity: 1;
+    }
+    #icones img:active{
+        box-shadow: 0 5px 3px black;
+        transform: translateX(5px);
+    }
+    .choix{
+        text-align: center;
+        font-size: 3em;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    /* ------------------------combat----------------- */
+    #combat{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    #combat img{
+        max-width: 40%;
+    }
+    #combat img:nth-child(2){
+        max-width: 20%;
+    }
+
+    /* ----------------------resultat----------------- */
+    #resultat {
+        width: 80%;
+        height: 50px;
+        background-color: chocolate;
+        margin: auto;
+        
+    }
+
+
+    /* ------------------------partie------------------- */
+    #partie {
+        text-align: center;
+        background-color: rgb(192, 83, 20);
+        line-height: 30px;
+        border: none;
+        margin: auto;
+    }
