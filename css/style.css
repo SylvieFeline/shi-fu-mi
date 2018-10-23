@@ -2,11 +2,14 @@
 
     html{
         max-height: 100%;
-    
+        background-color: black;
     }
 
     #blocPage{
-        background-color: coral;
+        /* background-color: coral; */
+        background-image: url("../images/bois.jpg");
+        background-repeat : repeat-y;
+        background-size: 100%;
         width: 90%;
         height: 100%;
         margin: 0 auto;
@@ -28,6 +31,8 @@
         border-radius: 50%;
         box-shadow: 0 10px 3px black;
         max-width: 30%;
+        width : 100px;
+        height : 100px;
         opacity: 0.8;
     }
     #icones img:hover{
@@ -39,7 +44,7 @@
     }
     .choix{
         text-align: center;
-        font-size: 3em;
+        font-size: 2em;
         margin-top: 0;
         margin-bottom: 50px;
     }
@@ -53,26 +58,38 @@
     }
     #combat img{
         max-width: 40%;
+        width : 150px;
+        height: 150px;
     }
     #combat img:nth-child(2){
         max-width: 20%;
+        
     }
 
     /* ----------------------resultat----------------- */
     #resultat {
-        width: 80%;
+        width: 60%;
         height: 50px;
-        background-color: chocolate;
-        margin: auto;
-        
+        background-color: rgba(116, 81, 56, 0.4);
+        margin: 50px auto;
+        text-align: center;
+        font-size: 2em;
+        line-height: 50px;
     }
 
 
     /* ------------------------partie------------------- */
-    #partie {
+    #bouton{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    button {
         text-align: center;
-        background-color: rgb(192, 83, 20);
+        background-color: rgb(80, 54, 40);
         line-height: 30px;
+        color: white;
         border: none;
         margin: auto;
     }
