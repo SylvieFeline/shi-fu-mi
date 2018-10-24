@@ -19,8 +19,13 @@
         font-family: "Akronim";
         display: flex;
         flex-direction: column;
-        
     }
+    #blocJeu{
+        display: flex;
+        flex-direction: column;
+    }
+
+
    /* ----------------------titre------------------ */
 
     h1{
@@ -29,7 +34,11 @@
         line-height: 0.5em;
        
     }
-  /* ------------------------images------------------ */
+  /* ------------------------choix joueur------------------ */
+    #choixJoueur{
+        order: 2;
+    }    
+
     #icones{
         display: flex;
         flex-direction: row;
@@ -62,6 +71,7 @@
     /* ------------------------combat----------------- */
     #blocCombat{
         margin: 0 5%;
+        order: 1;
     }
     #combat{
         display: flex;
