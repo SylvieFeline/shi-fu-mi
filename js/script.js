@@ -6,9 +6,9 @@ var choixIA = document.getElementById("IA");
 var resultat = document.getElementById("resultat");
 var initPartie = document.getElementById("partie");
 
-var img1 = "img/rock.jpg";
-var img2 = "img/paper.jpg";
-var img3 = "img/sciss.jpg";
+// var img1 = "img/rock.jpg";
+// var img2 = "img/paper.jpg";
+// var img3 = "img/sciss.jpg";
 
 function randomImg(){
     var rando = Math.floor(Math.random()*3);
@@ -22,63 +22,72 @@ function randomImg(){
     return IA.src;
 }
 
-
+var partie = true;
 
 pierre.addEventListener("click",function(){
-    choixJoueur.src = "img/rock.jpg";
-    // IA.src = randomImg ();
-    var rando = Math.floor(Math.random()*3);
-    if (rando == 1){
-        choixIA.src = "img/rock.jpg";
-        resultat.innerHTML = "Match nul";
-        resultat.style.backgroundColor = "orange";
-    }else if (rando == 2){
-        choixIA.src = "img/paper.jpg";
-        resultat.innerHTML = "Vous avez perdu";
-        resultat.style.backgroundColor = "red";
-    } else {
-        choixIA.src = "img/sciss.jpg";
-        resultat.innerHTML = "Vous avez gagné";
-        resultat.style.backgroundColor = "green";
-    };
+    if (partie == true){
+        choixJoueur.src = "img/rock.jpg";
+        // IA.src = randomImg ();
+        var rando = Math.floor(Math.random()*3);
+        if (rando == 1){
+            choixIA.src = "img/rock.jpg";
+            resultat.innerHTML = "Match nul";
+            resultat.style.backgroundColor = "orange";
+        }else if (rando == 2){
+            choixIA.src = "img/paper.jpg";
+            resultat.innerHTML = "Vous avez perdu";
+            resultat.style.backgroundColor = "red";
+        } else {
+            choixIA.src = "img/sciss.jpg";
+            resultat.innerHTML = "Vous avez gagné";
+            resultat.style.backgroundColor = "green";
+        };
+        partie = false;
+    }   
 });
 
 feuille.addEventListener("click",function(){
-    choixJoueur.src = "img/paper.jpg";
-    // IA.src = randomImg ();
-    var rando = Math.floor(Math.random()*3);
-    if (rando == 1){
-        choixIA.src = "img/paper.jpg";
-        resultat.innerHTML = "Match nul";
-        resultat.style.backgroundColor = "orange";
-    }else if (rando == 2){
-        choixIA.src = "img/sciss.jpg";
-        resultat.innerHTML = "Vous avez perdu";
-        resultat.style.backgroundColor = "red";
-    } else {
-        choixIA.src = "img/rock.jpg";
-        resultat.innerHTML = "Vous avez gagné";
-        resultat.style.backgroundColor = "green";
-    };
+    if (partie == true){
+        choixJoueur.src = "img/paper.jpg";
+        // IA.src = randomImg ();
+        var rando = Math.floor(Math.random()*3);
+        if (rando == 1){
+            choixIA.src = "img/paper.jpg";
+            resultat.innerHTML = "Match nul";
+            resultat.style.backgroundColor = "orange";
+        }else if (rando == 2){
+            choixIA.src = "img/sciss.jpg";
+            resultat.innerHTML = "Vous avez perdu";
+            resultat.style.backgroundColor = "red";
+        } else {
+            choixIA.src = "img/rock.jpg";
+            resultat.innerHTML = "Vous avez gagné";
+            resultat.style.backgroundColor = "green";
+        };
+        partie = false;
+    }    
 });
 
 ciseaux.addEventListener("click",function(){
-    choixJoueur.src = "img/sciss.jpg";
-    // IA.src = randomImg ();
-    var rando = Math.floor(Math.random()*3);
-    if (rando == 1){
-        choixIA.src = "img/sciss.jpg";
-        resultat.innerHTML = "Match nul";
-        resultat.style.backgroundColor = "orange";
-    }else if (rando == 2){
-        choixIA.src = "img/rock.jpg";
-        resultat.innerHTML = "Vous avez perdu";
-        resultat.style.backgroundColor = "red";
-    } else {
-        choixIA.src = "img/paper.jpg";
-        resultat.innerHTML = "Vous avez gagné";
-        resultat.style.backgroundColor = "green";
-    };
+    if (partie == true){
+        choixJoueur.src = "img/sciss.jpg";
+        // IA.src = randomImg ();
+        var rando = Math.floor(Math.random()*3);
+        if (rando == 1){
+            choixIA.src = "img/sciss.jpg";
+            resultat.innerHTML = "Match nul";
+            resultat.style.backgroundColor = "orange";
+        }else if (rando == 2){
+            choixIA.src = "img/rock.jpg";
+            resultat.innerHTML = "Vous avez perdu";
+            resultat.style.backgroundColor = "red";
+        } else {
+            choixIA.src = "img/paper.jpg";
+            resultat.innerHTML = "Vous avez gagné";
+            resultat.style.backgroundColor = "green";
+        };
+        partie = false;
+    }
 });
 
 
@@ -87,6 +96,7 @@ initPartie.addEventListener("click", function(){
     choixIA.src ="images/IA.jpg";
     resultat.style.backgroundColor = " rgba(116, 81, 56, 0.4)";
     resultat.innerHTML = "Prêt pour le combat ?";
+    partie = true;
 });
 
 
