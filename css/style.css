@@ -1,8 +1,11 @@
 
 
     html{
-        max-height: 100%;
+        height: 100%;
         background-color: black;
+    }
+    body{
+        min-height: 100%;
     }
 
     #blocPage{
@@ -11,21 +14,27 @@
         background-repeat : repeat-y;
         background-size: 100%;
         width: 90%;
-        height: 100%;
-        margin: 0 auto;
-
+        min-height: 100vh;
+        margin:  auto;
+        font-family: "Akronim";
+        display: flex;
+        flex-direction: column;
+        
     }
    /* ----------------------titre------------------ */
+
     h1{
         font-size: 4em;
         text-align: center;
-        
+        line-height: 0.5em;
+       
     }
   /* ------------------------images------------------ */
     #icones{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+       
     }
     #icones img{
         border-radius: 50%;
@@ -46,15 +55,19 @@
         text-align: center;
         font-size: 2em;
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 1em;
+        order:6;
     }
 
     /* ------------------------combat----------------- */
+    #blocCombat{
+        margin: 0 5%;
+    }
     #combat{
         display: flex;
         flex-direction: row;
         justify-content: center;
-
+        
     }
     #combat img{
         max-width: 40%;
@@ -68,13 +81,14 @@
 
     /* ----------------------resultat----------------- */
     #resultat {
-        width: 60%;
+        width: 90%;
         height: 50px;
         background-color: rgba(116, 81, 56, 0.4);
-        margin: 50px auto;
+        margin: 1em auto;
         text-align: center;
         font-size: 2em;
         line-height: 50px;
+       
     }
 
 
@@ -83,6 +97,7 @@
         display: flex;
         justify-content: center;
         margin-bottom: 10px;
+        width: 100%;
     }
     
     button {
@@ -91,5 +106,71 @@
         line-height: 30px;
         color: white;
         border: none;
-        margin: auto;
+        /* margin: auto; */
+        font-family: "Courgette"; 
+        box-shadow: 5px 5px 4px black;
     }
+    #partie:hover{
+        box-shadow: 5px 10px 3px black;
+        transform: translateX(-5px);
+    }
+
+@media screen and (min-width: 700px){
+
+    #blocPage {
+        flex-direction: column;
+    }
+    #blocJeu {
+        display: flex;
+        flex-direction: row;
+        min-height: 100%;
+    }
+    #blocCombat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        order: 2;
+    }
+    #choixJoueur{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        margin-left: 5%;
+        
+    }
+
+    #icones{
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        
+        /* height: 100%; */
+    }
+    #icones img{
+        max-width: 100%;
+        height: auto;
+        margin: 5% auto;
+        width : 150px;
+        /* height : 100px; */
+    }
+
+    #combat img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .choix{
+    /* display: none; */
+       
+    }
+
+    #bouton{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #partie{
+        margin-right: 5%;
+    }
+
+}    
